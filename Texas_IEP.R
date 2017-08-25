@@ -13,6 +13,6 @@ library(readxl)
 IEP <- read_excel("IEP.xlsx")
 Goals <- read_excel("Goals.xlsx")
 PP <- read_excel("Potential Partners.xlsx")
-
+head(PP)
 
 
