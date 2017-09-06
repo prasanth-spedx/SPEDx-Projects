@@ -22,18 +22,6 @@ PP <- read_excel("Potential Partners.xlsx",2)
 
 colnames(IEP)
 
-# QUery to subset IEP data for test student '636926167' with select criteria
+#Query to pull IEP data from Albany district in the zip file
 
-IEP1 <- subset(IEP, StudentId==636926167)
-nrow(IEP1)
-IEP2 <- subset(IEP, FormTypeId==9 & StudentId==636926167 & ScheduleType4=="Current")
-nrow(IEP2)
-
-
-# Test Student 636926167
-
-IEP1_sub <- IEP1[1:5,1:10]
-IEP1_sub
-
-IEP_sub <- IEP[1:3,1:10]
-IEP_sub
+AlbanyIEP <- read.table(unz("Albany.zip", "AlbanyIEP.txt"), nrows=10, header=T, sep="|")
